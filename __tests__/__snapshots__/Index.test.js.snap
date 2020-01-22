@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Index Page matches the snapshot 1`] = `
-<div>
+<div
+  data-test="component-index-page"
+>
   <h1>
-    Hello World
+    Index Page
   </h1>
 </div>
 `;

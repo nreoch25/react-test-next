@@ -4,7 +4,8 @@
       "presets": ["next/babel"]
     },
     "production": {
-      "presets": ["next/babel"]
+      "presets": ["next/babel"],
+      "plugins": [["react-remove-properties", { "properties": ["data-test"] }]]
     },
     "test": {
       "presets": [
