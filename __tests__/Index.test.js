@@ -1,9 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { shallow } from "enzyme";
+import toJson from "enzyme-to-json";
 import IndexPage from "../pages/index";
 
-test("renders without error", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<IndexPage />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe("Index Page", () => {
+  it("matches the snapshot", () => {
+    const wrapper = shallow(<IndexPage />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });
